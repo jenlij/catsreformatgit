@@ -23,17 +23,30 @@ int main(int argc, char ** argv)
     printf("(c) 2006 Andrew Skol and Goncalo Abecasis\n");
     printf("(*) formerly known as PowDre -- Andrew's Power Calculator\n\n");
     
+    
     int ncases = 1000;
+     int ncontrols = 1000;
+     
+     double pisamples = 1;
+     double pimarkers = 1;
+     
+     
+     double freq = 0.5;
+     double risk = 1.5;
+     double prevalence = 0.1;
+     double alpha = 0.0000070;
+    
+    /*int ncases = 1000;
     int ncontrols = 1000;
     
     double pisamples = 1;
     double pimarkers = 1;
     
+    
     double freq = 0.5;
     double risk = 1.5;
     double prevalence = 0.1;
-    
-    double alpha = 0.05 / 300000;
+    double alpha = 0.05 / 300000;*/
     
     bool   additive = false;
     bool   dominant = false;
@@ -171,34 +184,11 @@ int main(int argc, char ** argv)
            P, P1, Prep, Pjoint); */
     cout << "expected power for one stage study " << P << endl;
     
-   /* ofstream outFile;
-    outFile.open("CatsOutData.txt");
-    //probability of disease as a function of a genotype
-    //A/A: frequency, probability
-    outFile << fixed << setprecision(3) << p[0] <<"\n";
-    outFile << fixed << setprecision(3) << f[0] <<"\n";
-    //A/B: frequency, probability
-    outFile << fixed << setprecision(3) << p[1] <<"\n";
-    outFile << fixed << setprecision(3) << f[1] <<"\n";
-    //B/B: frequency, probability
-    outFile << fixed << setprecision(3) << p[2] <<"\n";
-    outFile << fixed << setprecision(3) << f[2] <<"\n";
     
-    //expected disease allele frequency
-    //cases
-    outFile << fixed << setprecision(3) << pcases << "\n";
-    //controls
-    outFile << fixed << setprecision(3) << pcontrols <<"\n";
-    //expected power
-    //one stage study
-    outFile << fixed << setprecision(3) << P << "\n";
-    
-    outFile.close(); */
-    
-    //this line will be parsed in php
     //AA freq, AA prob, AB freq, AB prob, BB freq, BB prob, cases, controls, power
     
     cout << "\n" << fixed << setprecision(3) << p[0] << " " << fixed << setprecision(3) << f[0] << " " << fixed << setprecision(3) << p[1] << " " << fixed << setprecision(3) << f[1] << " " << fixed << setprecision(3) << p[2] << " " << fixed << setprecision(3) << f[2] << " " << fixed << setprecision(3) << pcases << " " << fixed << setprecision(3) << pcontrols << " " << fixed << setprecision(3) << P << endl;
+
 
 }
 
